@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>smallscripts</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Todo App</title>
   </head>
   <body>
     <header class="sticky flex justify-between w-full gap-4 px-6 mt-6">
@@ -34,7 +34,7 @@
         <div id="menu-dropdown" class="cursor-pointer">
           <img
             class="w-14 h-14 sm:hidden"
-            src="./assets/menu-fill.svg"
+            src="../assets/menu-fill.svg"
             alt="Navigation"
           />
         </div>
@@ -63,18 +63,27 @@
         <hr class="w-48 h-1 mx-auto my-1 bg-black border-0 rounded" />
       </div>
     </section>
-    <section class="px-6">
-      <img class="py-10" src="./assets/javascript.svg" alt="Javascript logo" />
-      <h2 class="my-2 text-lg font-semibold underline">
-        Small and simple javascript projects.
-      </h2>
-      <p class="w-3/4 text-base">
-        This repo is where i keep all my small javascript projects as i am
-        learning. I might add more in the future but the ones in the navigations
-        are the ones i am working/are going to work on to increase my skills.
-      </p>
-      <hr class="w-4/5 h-1 mx-auto my-8 bg-black border-0 rounded" />
-    </section>
-    <script src="main.js"></script>
+    <div class="flex flex-col justify-end w-screen gap-3 h-1/5 mt-96">
+      <ul
+        id="todo-list"
+        class="self-center pl-4 list-disc w-96 justify-self-center"
+      ></ul>
+      <input
+        id="input-field"
+        type="text"
+        placeholder="Write your todo!"
+        class="self-center p-2 text-3xl rounded-lg shadow-md w-96"
+      />
+      <button
+        id="submit-todo"
+        class="self-center p-3 text-xl font-bold bg-orange-500 shadow-md w-96 hover:bg-orange-300 rounded-2xl"
+      >
+        Submit
+      </button>
+    </div>
+    <div class="flex justify-center my-10">
+      <ul id="todo-list" class="list-disc"></ul>
+    </div>
+    <script src="./todo.js"></script>
   </body>
 </html>
