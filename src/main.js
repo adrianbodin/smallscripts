@@ -11,5 +11,6 @@ function closeMenu() {
         document.getElementById("dropdown-list").style.display = "none";
     }
 }
-document.getElementById("menu-dropdown").addEventListener("click", openMenu);
+document.getElementById("menu-dropdown").addEventListener("mouseover", openMenu);
+document.getElementById("dropdown-list").addEventListener("mouseleave", openMenu);
 window.addEventListener("resize", closeMenu);
