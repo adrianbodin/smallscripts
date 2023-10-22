@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A quiz game where you can play with different categorys">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <header id="header" class="sticky flex justify-between w-full gap-4 px-6 mt-6">
+        <a class="self-center" href="./index.html"
+          ><h1 class="text-2xl font-bold">smallscripts</h1></a
+        >
+        <nav>
+          <ul class="hidden sm:flex">
+            <li>
+              <a class="bg-orange-500 w" href="./todoapp/todo.html">Home</a>
+            </li>
+            <li>
+              <a class="bg-orange-500" href="./todoapp/todo.html">TodoApp</a>
+            </li>
+            <li>
+              <a class="bg-orange-500" href="./todoapp/todo.html">Quiz</a>
+            </li>
+            <li>
+              <a class="bg-orange-500" href="./todoapp/todo.html">Random quote</a>
+            </li>
+            <li>
+              <a class="bg-orange-500" href="./todoapp/todo.html">Christmas</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <div id="menu-dropdown" class="cursor-pointer">
+            <img
+              class="w-14 h-14 sm:hidden"
+              src="../assets/menu-fill.svg"
+              alt="Navigation"
+            />
+          </div>
+        </nav>
+      </header>
+      <section class="absolute flex justify-end w-full px-6 pt-2">
+        <div
+          id="dropdown-list"
+          class="flex-col hidden w-1/2 rounded-bl-xl py-4 pl-2 gap-5 text-3xl text-right bg-[#A9A9A9] sm:hidden"
+        >
+          <p class="cursor-pointer hover:text-orange-700 hover:underline">
+            <a href="../index.html">Home</a>
+          </p>
+          <p class="cursor-pointer hover:text-orange-700 hover:underline">
+            <a href="../todoapp/todo.html">Todoapp</a>
+          </p>
+          <p class="text-orange-700 underline">
+            <a href="./quiz/quiz.html">Quiz</a>
+          </p>
+          <p class="cursor-pointer hover:text-orange-700 hover:underline">
+            Randomquote
+          </p>
+          <p class="cursor-pointer hover:text-orange-700 hover:underline">
+            Christmas
+          </p>
+          <hr class="w-48 h-1 mx-auto my-1 bg-black border-0 rounded" />
+        </div>
+      </section>
+      <main id="category-container" class="flex flex-col p-7">
+        <h2 class="mt-10 text-xl font-bold text-center">Please choose the amount of questions you want and what category</h2>
+        <div class="flex mt-10 justify-evenly">
+          <input class="bg-[#A9A9A9] rounded-lder-black border-2 p-2 self-center w-14 " type="number" name="questions" id="questions"
+         min="1" max="10" value="5" placeholder="Questions">
+         <fieldset id="difficulty">
+          <legend>Select a difficulty:</legend>
+        
+          <div>
+            <input type="radio" id="easy" data-difficulty="difficulty" name="difficulty" value="easy" checked />
+            <label for="easy">Easy</label>
+          </div>
+        
+          <div>
+            <input type="radio" id="medium" data-difficulty="difficulty" name="difficulty" value="medium" />
+            <label for="medium">Medium</label>
+          </div>
+        
+          <div>
+            <input type="radio" id="hard" data-difficulty="difficulty" name="difficulty" value="hard" />
+            <label for="hard">Hard</label>
+          </div>
+        </fieldset>
+        </div>
+        
+         <div class="grid gap-16 mt-20 md:gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div id="23" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/historybg.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">History</h2>
+         </div>
+         <div id="9" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/general.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center category">General Knowledge</h2>
+         </div>
+         <div id="22" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/geography.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Geography</h2>
+         </div>
+         <div id="27" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/animals.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Animals</h2>
+         </div>
+         <div id="17" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/nature.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Science & Nature</h2>
+         </div>
+         <div id="18" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/computers.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Science: Computers</h2>
+         </div>
+         <div id="19" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/math.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center text-white">Science: Mathematics</h2>
+         </div>
+         <div id="20" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/mythology.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Mythology</h2>
+         </div>
+         <div id="21" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/sports.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Sports</h2>
+         </div>
+         <div id="24" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/politics.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center text-white">Politics</h2>
+         </div>
+         <div id="25" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/art.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Art</h2>
+         </div>
+         <div id="26" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/celebrities.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Celebrities</h2>
+         </div>
+         <div id="28" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/vehicles.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Vehicles</h2>
+         </div>
+         <div id="30" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/gadgets.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Science: Gadgets</h2>
+         </div>
+         <div id="10" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/books.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Books</h2>
+         </div>
+         <div id="11" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/film.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Film</h2>
+         </div>
+         <div id="12" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/music.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Music</h2>
+         </div>
+         <div id="13" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/musical.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Musicals & Theatres</h2>
+         </div>
+         <div id="14" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/tv.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Television</h2>
+         </div>
+         <div id="15" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/videogames.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Video Games</h2>
+         </div>
+         <div id="16" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/boardgames.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Board Games</h2>
+         </div>
+         <div id="31" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/manga.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Anime & Manga</h2>
+         </div>
+         <div id="32" data-category="category" class=" h-52 rounded-lg
+          shadow-slate-600 cursor-pointer shadow-lg p-8 flex justify-center items-center bg-cover bg-[url('../assets/images/cartoons.jpg')]">
+           <h2 class="w-full font-serif text-6xl text-center">Cartoons</h2>
+         </div>
+         </div>
+      </main>
+      <script src="../main.js"></script>
+      <script type="module" src="./quiz.js"></script>
+</body>
+
+</html>
